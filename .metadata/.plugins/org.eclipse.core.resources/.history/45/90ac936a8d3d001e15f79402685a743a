@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+<!-- bean definitions here -->
+
+<bean id="add" class="in.mindcraft.SpringApp1.Address">
+	<property name="city" value="Mumbai"></property>    <!-- Setter Injection-->
+	<property name="state" value="Maharashtra"></property>
+</bean>
+
+
+<bean id="student" class="in.mindcraft.SpringApp1.Student">
+	<property name="rollNo" value="1001"></property>    <!-- Setter Injection-->
+	<property name="name" value="Nelson"></property>
+	<property name="resd" ref="add"></property>
+</bean>
+
+<bean id="l1" class="in.mindcraft.SpringApp1.Student"> <!-- CONSTRUCTOR INJECTION-->
+	<constructor-arg value="2001"></constructor-arg>
+	<constructor-arg value="apple"></constructor-arg>
+	<constructor-arg value="90000"></constructor-arg>
+	
+
+</bean>
+
+</beans>
